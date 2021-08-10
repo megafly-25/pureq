@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.base{
+    display: grid;
+    grid-template-areas: "header header header" "contenido contenido contenido" "footer footer footer";
+}
+.base .header{
+    grid-area: header;
+    background: rgba(153,0,0,0.9);
+    color:#fff;
+}
+.base .header{
+    display: grid;
+    grid-template-areas: "logo nav nav nav ";
+}
+.base .header .logo{
+    grid-area: logo;
+    margin: 1em 1em;
+    padding-left: 2em;
+}
+.base .header .logo img{
+    width: 180px;
+    height: auto;
+}
+.base .header .nav{
+    grid-area: nav;
+    grid-column: end;
+    display: flex;
+    flex-direction: column;    
+    margin: 1em 1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.base .header .nav .informacion ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+}
+.base .header .nav .informacion ul li{
+padding: 0.1em;
+}
+
+.base .header .nav .navbar ul{
+display: flex;
+flex-direction: row;
+list-style: none;
+}
+.base .header .nav .navbar ul li{
+padding: 0 1em;
+}
+.base .header .nav .navbar ul li a{
+text-decoration: none;
+color: #fff;
+transition: 0.3s;
+}
+.base .header .nav .navbar ul li a:hover{
+color: #fd7e14;
+}
+.base .contenido{
+    grid-area: contenido;
+}
+.base .footer{
+    grid-area: footer;
+}
+.base .footer{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background: rgba(153,0,0,0.9);
+}
+
+.base .footer .footer_pureq{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+.base .footer .footer_pureq .contactos ul li{
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: #fff;
+    border-bottom: #fff 1px solid;
+    margin-bottom: 0.5em;
+}
+.base .footer .footer_pureq .redes_sociales ul{
+    display: flex;
+    flex-direction: row;
+}
+.base .footer .footer_pureq .redes_sociales ul li{
+    list-style: none;  
+    padding: 0 0.5em; 
+}
+.base .footer .footer_pureq .redes_sociales ul .facebook a i{
+font-size: 40px;   
+color: #3b5998 ;
+}
+.base .footer .footer_pureq .redes_sociales ul .twitter a i{
+font-size: 40px;   
+color: #00acee;
+}
+.base .footer .footer_pureq .redes_sociales ul .whatsapp a i{
+font-size: 40px;   
+color: #00bb2d ;
+}
+.base .footer .footer_pureq .redes_sociales ul .instagram a i{
+font-size: 40px;   
+color: #C13584;
+}
+.base .footer .footer_pureq .redes_sociales ul .tiktok a i{
+font-size: 40px;   
+color: #FE2C55;
+}
+.base .footer .footer_pureq .socios ul li a img{
+width: 300px;
+}
+.base .footer .footer_pureq .socios ul li{
+    list-style: none;
+    }
+.base .footer .derechos_reservados{
+   padding-top: 1em;
+   color: #fff;
+}
+.base .footer .footer_pureq .contactos h3,
+.base .footer .footer_pureq .redes_sociales h3,
+.base .footer .footer_pureq .socios h3{
+    align-self: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:950px){
+    .base .header{
+        display: grid;
+        grid-template-areas: "logo" "nav";
+    }
+    .base .header .logo{
+        grid-area: logo;
+        margin: 2em auto;
+        
+    }
+    .base .header .nav{
+        grid-area: nav;  margin: 2em auto;
+    }
+    .base .footer .footer_pureq{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        }
+}
+@media screen and (max-width:700px){
+    .base .header .nav .informacion ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+    .base .header .nav .navbar ul{
+        display: flex;
+        flex-direction: column;
+    }
+}

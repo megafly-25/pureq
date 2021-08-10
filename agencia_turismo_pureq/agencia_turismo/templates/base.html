@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%block schema%}
+
+    {%endblock schema%}
+    {% block facebook_pixel %}
+
+    {% endblock facebook_pixel %}
+
+    {%block head%} 
+
+    {% block googleanalytics%}
+
+    {% endblock googleanalytics%}
+    {% block publicidad %}
+    {% endblock publicidad %}
+    {%block estilos%}
+    {%endblock estilos%}
+    
+    {%endblock head%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/estilos_base.css' %}">
+</head>
+<body>
+    <div class="base">
+    {% include 'superior/header.html'%}
+        {%block contenido%}
+
+        {%endblock%}
+     {% include 'inferior/footer.html'%}
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+</body>
+</html>

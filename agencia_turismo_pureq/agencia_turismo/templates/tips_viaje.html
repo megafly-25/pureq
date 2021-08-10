@@ -1,0 +1,95 @@
+{%extends "base.html"%}
+{%load static %}
+
+    {%block schema%}
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Tips de Viaje agencia de Turismo Pureq Runa Tours",
+          "author": "Pureq Runa Tours",
+          "url": "https://agenciadelturista.com/",
+          "address": "Peru",
+          "sameAs": [
+                https://es-la.facebook.com/luis.riverac.5"
+          ]
+        }
+      </script>
+    {%endblock schema%}
+    {% block facebook_pixel %}
+
+    {% endblock facebook_pixel %}
+
+    {%block head%} 
+
+    {% block googleanalytics%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2CK7DEKWS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X2CK7DEKWS');
+        </script>
+    {% endblock googleanalytics%}
+    {% block publicidad %}
+    <title>Tips de Viaje agencia de Turismo Pureq Runa Tours</title>
+    <meta name="description" content="agencia de turismo, 
+    viaje a cerro de pasco, viajar a oxapampa, viajar a yanahuanca, 
+    pureq, runa, tours, reservar agencia">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="agencia de turismo en cerro de pasco,
+     agencia de turismo pureq, agencia en rocco, agencia en yanahuanca, agencia en Peru">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://agenciadelturista.com/">
+    <link rel="shortcut icon" href="{% static 'img/agencia-pureq.png' %}">
+    <meta name="referrer" content="origin">
+    <meta name="google" content="translate">
+    <meta name="google" content="sitelinkssearchbox">
+    <link rel="dns-prefetch" href="https://agenciadelturista.com/">
+    <meta property="fb:app_id" content="luis.riverac.5">
+    <meta property=”og:title” content="Tips de Viaje agencia de Turismo Pureq Runa Tours">
+    <meta property=”og:type” content="website">
+    <meta property="og:url" content="https://agenciadelturista.com/">
+    <meta property="og:image" content="{% static 'img/agencia-de-turismo-pureq-bosque-piedras-huayllay.jpg' %}">
+    <meta property="og:site_name" content="Tips de Viaje agencia de Turismo Pureq Runa Tours" >
+    <meta property="og:locale" content="es-PE" >
+    <meta property="og:description" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@agencia_pureq">
+    <meta name="twitter:creator" content="@agencia_pureq">
+    <meta name="twitter:title" content="Tips de Viaje agencia de Turismo Pureq Runa Tours">
+    <meta name="twitter:description" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    <meta name="twitter:url" content="https://agenciadelturista.com/">
+    <meta name="twitter:image" content="{% static 'img/agencia-de-turismo-pureq-bosque-piedras-huayllay.jpg'%}">
+    <meta name="twitter:image:alt" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    {% endblock publicidad %}
+    {%block estilos%}
+    <link rel="stylesheet" href="{% static 'css/estilos_tips.css'%}">
+    {%endblock estilos%}
+    {%endblock head%}
+{%block contenido%}    
+    <div class="contenido">
+        <p>
+        <b>Cambiar dinero:</b> Dentro de la ciudad se puede cambiar dinero tanto en bancos como en casas de cambio autorizadas. Estas últimas son fáciles de encontrar tanto en el aeropuerto como en los alrededores de la Plaza de Armas. <br><br>
+
+        <b>Vestimenta:</b> Ropa de telas frescas para el día y algún abrigo para las noches, considerando temperaturas que a lo largo del año no suben de 25 °C y muy rara vez bajan de los 10 °C. Entre diciembre y marzo también es recomendable contar con algún impermeable o paraguas, para protegerse de las precipitaciones.<br><br>
+
+       <b> Propina:</b> Si bien no es un servicio obligatorio se suele dejar un 10% del consumo total. <br><br>
+
+        <b>Información turística:</b> Se pueden adquirir folletos, mapas e información turística, en los módulos situados en el Aeropuerto y el Portal de la Municipalidad en Plaza de Armas. <br><br>
+
+        <b>Seguridad:</b> Arequipa no presenta graves problemas de seguridad, por lo que las recomendaciones son las mismas que al viajar a cualquier otro destino, evitando la ostentación de artículos de valor o caminar de noche por las zonas no turísticas. <br><br>
+
+        <b>Alojamiento:</b> El mejor lugar para hospedarse corresponde al centro histórico, donde se concentran la mayoría de los atractivos turísticos, si bien puede ser más caro permite el ahorro en transporte. <br><br>
+
+        <b>Tour:</b> Es mejor comprar en agencias de viajes, ya que en plaza hay personas que captan turistas ofreciendo tours (llamados jaladores, informales) <br><br>
+
+        <b>Radiación:</b> Es imprescindible el uso de protector solar y gafas con filtro UV, considerando los altos índices de radiación presentes. <br><br>
+
+        <b>Ahorro:</b> Si se busca ahorrar en comida, una buena opción es el Mercado San Camilo en el Centro Histórico, encontrándose en él algunos restaurantes y cafeterías con precios significativamente más bajos que en el resto de la ciudad. <br><br>
+    </p>
+    </div>
+{%endblock%}

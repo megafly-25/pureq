@@ -1,0 +1,121 @@
+{%extends "base.html"%}
+{%load static %}
+
+    {%block schema%}
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Galeria de Fotos de la Agencia de Turismo Pureq Runa Tours",
+          "author": "Pureq Runa Tours",
+          "url": "https://agenciadelturista.com/",
+          "address": "Peru",
+          "sameAs": [
+                https://es-la.facebook.com/luis.riverac.5"
+          ]
+        }
+      </script>
+    {%endblock schema%}
+    {% block facebook_pixel %}
+
+    {% endblock facebook_pixel %}
+
+    {%block head%} 
+
+    {% block googleanalytics%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2CK7DEKWS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X2CK7DEKWS');
+        </script>
+    {% endblock googleanalytics%}
+    {% block publicidad %}
+    <title>Galeria de Fotos de la Agencia de Turismo Pureq Runa Tours</title>
+    <meta name="description" content="agencia de turismo, 
+    viaje a cerro de pasco, viajar a oxapampa, viajar a yanahuanca, 
+    pureq, runa, tours, reservar agencia">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="agencia de turismo en cerro de pasco,
+     agencia de turismo pureq, agencia en rocco, agencia en yanahuanca, agencia en Peru">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://agenciadelturista.com/">
+    <link rel="shortcut icon" href="{% static 'img/agencia-pureq.png' %}">
+    <meta name="referrer" content="origin">
+    <meta name="google" content="translate">
+    <meta name="google" content="sitelinkssearchbox">
+    <link rel="dns-prefetch" href="https://agenciadelturista.com/">
+    <meta property="fb:app_id" content="luis.riverac.5">
+    <meta property=”og:title” content="Galeria de Fotos de la Agencia de Turismo Pureq Runa Tours">
+    <meta property=”og:type” content="website">
+    <meta property="og:url" content="https://agenciadelturista.com/">
+    <meta property="og:image" content="{% static 'img/agencia-de-turismo-pureq-bosque-piedras-huayllay.jpg' %}">
+    <meta property="og:site_name" content="Galeria de Fotos de la Agencia de Turismo Pureq Runa Tours" >
+    <meta property="og:locale" content="es-PE" >
+    <meta property="og:description" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@agencia_pureq">
+    <meta name="twitter:creator" content="@agencia_pureq">
+    <meta name="twitter:title" content="Galeria de Fotos de la Agencia de Turismo Pureq Runa Tours">
+    <meta name="twitter:description" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    <meta name="twitter:url" content="https://agenciadelturista.com/">
+    <meta name="twitter:image" content="{% static 'img/agencia-de-turismo-pureq-bosque-piedras-huayllay.jpg'%}">
+    <meta name="twitter:image:alt" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    {% endblock publicidad %}
+    {%block estilos%}
+    <link rel="stylesheet" href="{% static 'css/estilos_galeria.css'%}">
+    {%endblock estilos%}
+    {%endblock head%}
+{%block contenido%}    
+    <div class="contenido">
+            <!-- Gallery -->
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt=""
+              />
+
+              <img
+                src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt=""
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt=""
+              />
+
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt=""
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt=""
+              />
+
+              <img
+                src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- Gallery -->
+    </div>
+{%endblock%}

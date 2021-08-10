@@ -1,0 +1,29 @@
+{%load static%}
+<header class="header">
+    <div class="logo">
+        <img src="{% static 'img/agencia-pureq.png' %}" alt="Agencia de Viajes Pureq Runa Tours">
+    </div>
+    <div class="nav">
+        <div class="informacion">
+            <ul>
+                <li><i class="fas fa-envelope"></i> Correo: luis-rc_13@hotmail.com <a href=""><i class="fab fa-facebook" style="font-size: 25px; color: #fff;"></i></a>&nbsp&nbsp<a href=""><i class="fab fa-whatsapp" style="font-size: 26px; color:#fff;"></i></a></li>
+                <li><i class="fas fa-phone-volume"></i> Celular: 980368343 - 968483024</li>
+                <li><i class="fas fa-map-marked-alt"></i><i> Direccion: Av. Andres Avelino Caceres N° 231 - Yanacancha- Cerro de Pasco</i></li>
+            </ul>
+        </div>
+        <div class="separador">
+            <hr style="width: 100%; color: white; height: 5px; background-color:white;" />
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'Principal'%}">Inicio</a></li>
+                <li><a href="{%url 'Nosotros' %}">Nosotros</a></li>
+                <li><a href="{% url 'Paquetes_turisticos'%}">Paquetes Turisticos</a></li>
+                <li><a href="{% url 'Tips_viaje'%}">Tips de Viaje</a></li>
+                <li><a href="{% url 'Eventos_Turisticos'%}">Eventos Turisticos</a></li>
+                <li><a href="{% url 'Galeria_Imagenes'%}">Galeria de Fotos</a></li>
+                <li><a href="{%url 'Contacto'%}">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

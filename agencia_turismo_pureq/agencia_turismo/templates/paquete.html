@@ -1,0 +1,187 @@
+{%extends "base.html"%}
+{%load static %}
+
+    {%block schema%}
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Agencia de Turismo Pureq Runa Tours",
+          "author": "Pureq Runa Tours",
+          "url": "https://agenciadelturista.com/",
+          "address": "Peru",
+          "sameAs": [
+                https://es-la.facebook.com/luis.riverac.5"
+          ]
+        }
+      </script>
+    {%endblock schema%}
+    {% block facebook_pixel %}
+
+    {% endblock facebook_pixel %}
+
+    {%block head%} 
+
+    {% block googleanalytics%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2CK7DEKWS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X2CK7DEKWS');
+        </script>
+    {% endblock googleanalytics%}
+    {% block publicidad %}
+    <title>Agencia de Turismo Pureq Runa Tours</title>
+    <meta name="description" content="agencia de turismo, 
+    viaje a cerro de pasco, viajar a oxapampa, viajar a yanahuanca, 
+    pureq, runa, tours, reservar agencia">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="agencia de turismo en cerro de pasco,
+     agencia de turismo pureq, agencia en rocco, agencia en yanahuanca, agencia en Peru">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://agenciadelturista.com/">
+    <link rel="shortcut icon" href="{% static 'img/agencia-pureq.png' %}">
+    <meta name="referrer" content="origin">
+    <meta name="google" content="translate">
+    <meta name="google" content="sitelinkssearchbox">
+    <link rel="dns-prefetch" href="https://agenciadelturista.com/">
+    <meta property="fb:app_id" content="luis.riverac.5">
+    <meta property=”og:title” content="Agencia de Turismo Pureq Runa Tours">
+    <meta property=”og:type” content="website">
+    <meta property="og:url" content="https://agenciadelturista.com/">
+    <meta property="og:image" content="{% static 'img/agencia-de-turismo-pureq-bosque-piedras-huayllay.jpg' %}">
+    <meta property="og:site_name" content="Agencia de Turismo Pureq Runa Tours" >
+    <meta property="og:locale" content="es-PE" >
+    <meta property="og:description" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@agencia_pureq">
+    <meta name="twitter:creator" content="@agencia_pureq">
+    <meta name="twitter:title" content="Agencia de Turismo Pureq Runa Tours">
+    <meta name="twitter:description" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    <meta name="twitter:url" content="https://agenciadelturista.com/">
+    <meta name="twitter:image" content="{% static 'img/agencia-de-turismo-pureq-bosque-piedras-huayllay.jpg'%}">
+    <meta name="twitter:image:alt" content="Reserva un Paquete Turistico con Nosotros, Agencia Pureq Runa Tours">
+    {% endblock publicidad %}
+    {%block estilos%}
+    <link rel="stylesheet" href="{% static 'css/estilos_paquete.css'%}">
+    {%endblock estilos%}
+    {%endblock head%}
+    {%block contenido%}    
+    <div class="contenido">
+        {% for paquete in paquetes %}
+        <h1>{{paquete.nombre}}</h1>
+        <div class="paquete">
+            <div class="imagenes">
+                <div class="img_pri">
+                    <img src="{{paquete.galeria.img1.url}}" class="w-100 shadow-1-strong rounded mb-4" alt="">
+                </div>
+                <div class="img_sec">
+                    <div class="block2">
+                        <img src="{{paquete.galeria.img2.url}}" class="w-100 shadow-1-strong rounded mb-4" alt="">
+                    </div>
+                    <div class="block3">
+                        <img src="{{paquete.galeria.img3.url}}" class="w-100 shadow-1-strong rounded mb-4" alt="">
+                    </div>
+                    <div class="block4">
+                        <img src="{{paquete.galeria.img4.url}}" class="w-100 shadow-1-strong rounded mb-4" alt="">
+                    </div>
+                    <div class="block5">
+                        <img src="{{paquete.galeria.img5.url}}" class="w-100 shadow-1-strong rounded mb-4" alt="">
+                    </div>
+                </div>         
+            </div>
+            <div class="precio_registro">
+                <div class="precio">
+                    <h3>PRECIO DEL PAQUETE</h3>
+                    <h4>
+                        S/ {{paquete.precio}}
+                    </h4>
+                </div>
+                <div class="descripcion">
+                    <ul>
+                        <li>{{paquete.recorrido.Recorrido1|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido2|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido3|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido4|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido5|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido6|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido7|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido8|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido9|title}}</li>
+                        <li>{{paquete.recorrido.Recorrido10|title}}</li>
+                    </ul>
+                    <h3>Incluye:</h3>
+                    <h3>{{paquete.servicio.all|join:', '|title}}</h3>
+                </div>
+            </div>
+           
+        </div>
+        <div class="reservar">
+            <h1>
+                Reserva tu Paquete {{paquete.nombre}} 
+            </h1>
+            <form class="row g-3">
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Nombres:</label>
+                  <input type="text" class="form-control" id="validationDefault01" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Apellidos:</label>
+                  <input type="text" class="form-control" id="validationDefault02" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefaultUsername" class="form-label">Correo:</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationDefault03" class="form-label">Ciudad:</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationDefault05" class="form-label">Celular</label>
+                  <input type="text" class="form-control" id="validationDefault05" required>
+                </div>
+                <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Reservar Paquete</button>
+                </div>
+              </form>
+              {% endfor %}
+        </div>
+        <div class="recomendaciones">
+            {% for li_pa in lista_paquetes %}
+            <a href="{%url 'paquete' slug=li_pa.slug_paquete%}">
+                <div class="card">
+                <img src="{{li_pa.galeria.img1.url}}" alt="{{paquete.nombre}}">
+                <div class="icon_image">
+                </div>
+                <div class="descripcion">
+                    <div class="lugar_dias">
+                        <h2>{{li_pa.nombre}}</h2>
+                        <h3>Salida: {{li_pa.nombre}}</h3>
+                    </div>
+                    <div class="precio_detalle">
+                        <div class="precio">
+                            <h4>Desde</h4>
+                            <h3>S/ {{li_pa.precio}}</h3>
+                        </div>
+                        <div class="detalle">
+                            <button>Ver detalle</button>
+                        </div>
+                    </div>
+                </div>
+            </div></a>
+            {% endfor %}
+        </div>
+    </div>
+{%endblock%}
