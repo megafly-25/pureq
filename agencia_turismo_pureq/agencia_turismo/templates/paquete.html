@@ -73,7 +73,7 @@
     {%block contenido%}    
     <div class="contenido">
         {% for paquete in paquetes %}
-        <h1>{{paquete.nombre}}</h1>
+       <h1>{{paquete.nombre}}</h1>
         <div class="paquete">
             <div class="imagenes">
                 <div class="img_pri">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="col-md-12">
                     <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                 <div class="col-12">
                   <button class="btn btn-primary" type="submit">Reservar Paquete</button>
@@ -159,21 +159,21 @@
               {% endfor %}
         </div>
         <div class="recomendaciones">
-            {% for li_pa in lista_paquetes %}
-            <a href="{%url 'paquete' slug=li_pa.slug_paquete%}">
+            {% for lista_paquete in lista_paquetes %}
+            <a href="{%url 'Paquete' slug=lista_paquete.slug_paquete%}">
                 <div class="card">
-                <img src="{{li_pa.galeria.img1.url}}" alt="{{paquete.nombre}}">
+                <img src="{{lista_paquete.galeria.img1.url}}" alt="{{lista_paquete.nombre}}">
                 <div class="icon_image">
                 </div>
                 <div class="descripcion">
                     <div class="lugar_dias">
-                        <h2>{{li_pa.nombre}}</h2>
-                        <h3>Salida: {{li_pa.nombre}}</h3>
+                        <h2>{{lista_paquete.nombre}}</h2>
+                        <h3>Salida: {{lista_paquete.nombre}}</h3>
                     </div>
                     <div class="precio_detalle">
                         <div class="precio">
                             <h4>Desde</h4>
-                            <h3>S/ {{li_pa.precio}}</h3>
+                            <h3>S/ {{lista_paquete.precio}}</h3>
                         </div>
                         <div class="detalle">
                             <button>Ver detalle</button>

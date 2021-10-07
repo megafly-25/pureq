@@ -5,8 +5,10 @@ from django.contrib import messages
 
 # Create your views here.
 def Principal(request):
-    paquetes=Paquete_turistico_agencia.objects.order_by('nombre')
-    return render(request,"principal.html",{'paquetes':paquetes})
+    paquete=Paquete_turistico_agencia.objects.order_by('nombre')
+    lista_paquetes=Paquete_turistico_agencia.objects.order_by('nombre')[:4]
+    servicios=Servicios_agencia.objects.get_queryset().order_by('nombre')
+    return render(request,"principal.html",{'paquetes':paquete,'lista_paquetes':lista_paquetes,'servicios':servicios})
 def Nosotros(request):
     return render(request,"nosotros.html")
 def Paquetes_Turisticos(request):

@@ -76,7 +76,7 @@
         <h1>Paquetes Nacionales</h1>
         <div class="paquetes_peru">
             {% for paquete in paquetes %}
-            <a href="{%url 'paquete' slug=paquete.slug_paquete%}">
+            <a href="{% url 'Paquete' slug=paquete.slug_paquete%}">
                 <div class="card">
                 <img src="{{paquete.galeria.img1.url}}" alt="{{paquete.nombre}}">
                 <div class="icon_image">
@@ -99,10 +99,10 @@
             </div></a>
             {% endfor %}
             </div>
-        <h1>Paquetes en la Región Pasco</h1>
+       <h1>Paquetes en la Región Pasco</h1>
         <div class="paquetes_pasco">
             {% for paquete in paquetes %}
-            <a href="{%url 'paquete' slug=paquete.slug_paquete%}">
+            <a href="{%url 'Paquete' slug=paquete.slug_paquete%}">
                 <div class="card">
                 <img src="{{paquete.galeria.img1.url}}" alt="{{paquete.nombre}}">
                 <div class="icon_image">
@@ -128,7 +128,7 @@
         <h1>Paquetes en la Region Daniel Alcides Carrión</h1>
         <div class="paquetes_yanahuanca">
             {% for paquete in paquetes %}
-            <a href="{%url 'paquete' slug=paquete.slug_paquete%}">
+            <a href="{%url 'Paquete' slug=paquete.slug_paquete%}">
                 <div class="card">
                 <img src="{{paquete.galeria.img1.url}}" alt="{{paquete.nombre}}">
                 <div class="icon_image">
@@ -154,7 +154,7 @@
         <h1>Paquetes en la Region Oxapampa</h1>
         <div class="paquetes_oxapampa">
             {% for paquete in paquetes %}
-            <a href="{%url 'paquete' slug=paquete.slug_paquete%}">
+            <a href="{%url 'Paquete' slug=paquete.slug_paquete%}">
                 <div class="card">
                 <img src="{{paquete.galeria.img1.url}}" alt="{{paquete.nombre}}">
                 <div class="icon_image">

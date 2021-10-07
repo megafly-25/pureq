@@ -75,7 +75,7 @@
         <h1>Paquetes Turisticos</h1>
         <div class="paquetes">
             {% for paquete in paquetes %}
-            <a href="{%url 'paquete' slug=paquete.slug_paquete%}">
+            <a href="{%url 'Paquete' slug=paquete.slug_paquete%}">
                 <div class="card">
                 <img src="{{paquete.galeria.img1.url}}" alt="{{paquete.nombre}}">
                 <div class="icon_image">
